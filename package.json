@@ -1,0 +1,19 @@
+{
+  "name": "cheassy-users",
+  "version": "1.0.0",
+  "description": "esta es la 1er version de este microservicio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evilBetooxx/cheassy-users.git"
+  },
+  "author": "betooxx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evilBetooxx/cheassy-users/issues"
+  },
+  "homepage": "https://github.com/evilBetooxx/cheassy-users#readme"
+}
