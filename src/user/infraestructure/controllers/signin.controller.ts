@@ -18,6 +18,7 @@ export class SignInController {
         lastName: user.lastName,
         email: user.email,
         cheeses: user.cheeses || [],
+        photo: user.photo,
         token: token,
       };
 

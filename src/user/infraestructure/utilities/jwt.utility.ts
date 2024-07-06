@@ -7,20 +7,15 @@ export class JsonWebTokenUtility implements IJsonWebTokenRepository {
     return jwt.sign(payload, process.env.TOKEN_SECRET || "");
   }
 
-  async verifyToken(
-    req: Request,
-    res: Response,
-    next: NextFunction
-  ): Promise<any> {
-    const { token } = req.cookies;
-
-    if (!token) return res.status(401).json({ message: "No estás autorizado" });
-
-    jwt.verify(token, process.env.TOKEN_SECRET || '', (err: any, user: any) => {
-      if (err) return res.status(401).json({ message: "No estás autorizado" });
-      user = user;
-      console.log(user);
-      next();
+  async verifyToken(token: string): Promise<any> {
+    return new Promise((resolve, reject) => {
+      jwt.verify(token, process.env.TOKEN_SECRET || "", (err, decoded) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(decoded);
+        }
+      });
     });
   }
 }

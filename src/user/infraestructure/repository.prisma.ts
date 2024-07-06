@@ -28,15 +28,15 @@ export class UserRepositoryPrisma implements IUserRepository {
     }
 
     return new User(
-        userSaved.firstName,
-        userSaved.lastName,
-        userSaved.email,
-        userSaved.password,
-        userSaved.photo,
-        userSaved.cheeses,
-        userSaved.createdAt,
-        userSaved.updatedAt
-      );
+      userSaved.firstName,
+      userSaved.lastName,
+      userSaved.email,
+      userSaved.password,
+      userSaved.photo,
+      userSaved.cheeses,
+      userSaved.createdAt,
+      userSaved.updatedAt
+    );
   }
 
   async signin(user: User): Promise<User> {
@@ -51,23 +51,15 @@ export class UserRepositoryPrisma implements IUserRepository {
     }
 
     return new User(
-        userSaved.firstName,
-        userSaved.lastName,
-        userSaved.email,
-        userSaved.password,
-        userSaved.photo,
-        userSaved.cheeses,
-        userSaved.createdAt,
-        userSaved.updatedAt
-      );
-  }
-
-  async signout(): Promise<String> {
-    return "Finalizaste la sesión";
-  }
-
-  async verifyToken(token: string): Promise<String> {
-    return "VerifyToken";
+      userSaved.firstName,
+      userSaved.lastName,
+      userSaved.email,
+      userSaved.password,
+      userSaved.photo,
+      userSaved.cheeses,
+      userSaved.createdAt,
+      userSaved.updatedAt
+    );
   }
 
   async findByEmail(email: string): Promise<any> {
@@ -92,4 +84,5 @@ export class UserRepositoryPrisma implements IUserRepository {
       userSaved.updatedAt
     );
   }
+
 }
