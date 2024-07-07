@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-  "dev": "nodemon --exec tsx src/index.ts"
-},
+    "dev": "nodemon --exec tsx src/index.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/evilBetooxx/cheassy-users.git"

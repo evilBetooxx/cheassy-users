@@ -18,8 +18,6 @@ export class UserRepositoryPrisma implements IUserRepository {
         password: user.password,
         photo: user.photo,
         cheeses: user.cheeses,
-        createdAt: user.createdAt,
-        updatedAt: user.updatedAt,
       },
     });
 
@@ -28,6 +26,7 @@ export class UserRepositoryPrisma implements IUserRepository {
     }
 
     return new User(
+      userSaved.id,
       userSaved.firstName,
       userSaved.lastName,
       userSaved.email,
@@ -51,6 +50,7 @@ export class UserRepositoryPrisma implements IUserRepository {
     }
 
     return new User(
+      userSaved.id,
       userSaved.firstName,
       userSaved.lastName,
       userSaved.email,
@@ -74,6 +74,7 @@ export class UserRepositoryPrisma implements IUserRepository {
     }
 
     return new User(
+      userSaved.id,
       userSaved.firstName,
       userSaved.lastName,
       userSaved.email,

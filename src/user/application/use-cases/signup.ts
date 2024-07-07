@@ -24,6 +24,7 @@ export class signUp {
     const photo = "";
 
     const user = new User(
+      "",
       firstName,
       lastName,
       email,
@@ -33,7 +34,6 @@ export class signUp {
       new Date(),
       new Date()
     );
-    console.log(user);
     return this.userRepository.signup(user);
   }
 }

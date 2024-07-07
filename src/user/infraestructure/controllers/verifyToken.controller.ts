@@ -18,6 +18,7 @@ export class VerifyTokenController {
       const user = await this.verifyTokenUseCase.run(token);
       
       const response = {
+        id: user.id,
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,

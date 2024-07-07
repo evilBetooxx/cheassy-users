@@ -11,9 +11,10 @@ export class SignUpController {
     const { firstName, lastName, email, password } = req.body;
     try {
       const user = await this.signUpUseCase.run(firstName, lastName, email, password);
-      const token = await jwt.signToken({ email: user.email });
+      const token = await jwt.signToken({ id: user.id });
 
       const response = {
+        id: user.id,
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,
