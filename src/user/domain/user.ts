@@ -7,7 +7,5 @@ export class User {
     public password: string,
     public photo: string,
     public cheeses: string[],
-    public createdAt: Date,
-    public updatedAt: Date
   ) {}
 }

@@ -21,7 +21,7 @@ export class signUp {
     }
 
     const hashedPassword = await this.bycriptRepository.hashPassword(password);
-    const photo = "";
+    const photo = "https://res.cloudinary.com/dn1ng7anm/image/upload/v1720400784/ranchero_c7ttku.png";
 
     const user = new User(
       "",
@@ -31,8 +31,6 @@ export class signUp {
       hashedPassword,
       photo,
       [],
-      new Date(),
-      new Date()
     );
     return this.userRepository.signup(user);
   }

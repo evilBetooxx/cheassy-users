@@ -33,8 +33,6 @@ export class UserRepositoryPrisma implements IUserRepository {
       userSaved.password,
       userSaved.photo,
       userSaved.cheeses,
-      userSaved.createdAt,
-      userSaved.updatedAt
     );
   }
 
@@ -57,8 +55,6 @@ export class UserRepositoryPrisma implements IUserRepository {
       userSaved.password,
       userSaved.photo,
       userSaved.cheeses,
-      userSaved.createdAt,
-      userSaved.updatedAt
     );
   }
 
@@ -81,8 +77,6 @@ export class UserRepositoryPrisma implements IUserRepository {
       userSaved.password,
       userSaved.photo,
       userSaved.cheeses,
-      userSaved.createdAt,
-      userSaved.updatedAt
     );
   }
 
