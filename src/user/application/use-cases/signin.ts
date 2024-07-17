@@ -20,9 +20,9 @@ export class signIn {
       user.password
     );
 
-    if (!isMatch) {
-      throw new Error("Contraseña incorrecta");
-    }
+   if(!isMatch){ 
+    throw new Error("Contraseña incorrecta");
+   }
     
     return user;
   }

@@ -59,6 +59,7 @@ export class UserRepositoryPrisma implements IUserRepository {
   }
 
   async findByEmail(email: string): Promise<any> {
+
     const userSaved = await this.prisma.user.findFirst({
       where: {
         email: email,
