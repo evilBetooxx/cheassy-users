@@ -23,6 +23,15 @@ export class signUp {
     const hashedPassword = await this.bycriptRepository.hashPassword(password);
     const photo = "https://res.cloudinary.com/dn1ng7anm/image/upload/v1720400784/ranchero_c7ttku.png";
 
+    // Define los valores predefinidos para params
+    const predefinedParams = {
+      temperature: 35,
+      humidity: 70,
+      nh3: 20,
+      co2: 10,
+      ph: 5.5,
+    };
+
     const user = new User(
       "",
       firstName,
@@ -31,6 +40,7 @@ export class signUp {
       hashedPassword,
       photo,
       [],
+      predefinedParams // Añade los params predefinidos aquí
     );
     return this.userRepository.signup(user);
   }

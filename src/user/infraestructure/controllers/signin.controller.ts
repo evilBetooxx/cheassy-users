@@ -21,6 +21,7 @@ import { Prisma } from "@prisma/client";
           email: user.email,
           cheeses: user.cheeses || [],
           photo: user.photo,
+          params: user.params,
           token: token,
         };
 

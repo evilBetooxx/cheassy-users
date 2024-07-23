@@ -7,5 +7,12 @@ export class User {
     public password: string,
     public photo: string,
     public cheeses: string[],
+    public params: {
+      temperature: number;
+      humidity: number;
+      nh3: number;
+      co2: number;
+      ph: number;
+    }
   ) {}
 }

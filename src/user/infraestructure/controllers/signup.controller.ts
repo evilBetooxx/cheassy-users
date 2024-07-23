@@ -19,6 +19,7 @@ export class SignUpController {
         lastName: user.lastName,
         email: user.email,
         cheeses: user.cheeses || [],
+        params: user.params,
         token: token,
       };
 
