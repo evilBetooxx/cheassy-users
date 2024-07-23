@@ -12,7 +12,7 @@ app.disable("x-powered-by");
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors({
-    origin: "*",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "PREFLIGHT"],
     credentials: true,
 }));

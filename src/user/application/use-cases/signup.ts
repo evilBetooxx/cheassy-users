@@ -42,6 +42,6 @@ export class signUp {
       [],
       predefinedParams // Añade los params predefinidos aquí
     );
-    return this.userRepository.signup(user);
+    return await this.userRepository.signup(user);
   }
 }
